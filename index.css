@@ -9,6 +9,107 @@ div:not(.art-container) {
    border-radius: 2px;
 }
 
+.rectangle-container {
+   width: 90vw;
+   height: auto;
+   margin: 0 auto;
+}
+
+@media only screen and (min-width: 601px) {
+   .rectangle-container {
+      display: none;
+   }
+}
+.small {
+   width: 100%;
+   height: 50px;
+}
+
+.rec-01 {
+   background-color: #cbcad2;
+}
+.rec-01 {
+   background-color: #c3c3c3;
+}
+.rec-03 {
+   background-color: #b6b6b4;
+}
+.rec-03-1_2 {
+   background-color: #c0bcbe;
+}
+.rec-04 {
+   background-color: #a5a6ab;
+}
+.rec-05 {
+   background-color: #9e9da3;
+}
+.rec-06 {
+   background-color: #a5a5a5;
+}
+.rec-07 {
+   background-color: #a7a7a6;
+}
+.rec-08 {
+   background-color: #97969e;
+}
+.rec-09 {
+   background-color: #88878c;
+}
+.rec-10 {
+   background-color: #8e8d95;
+}
+.rec-11 {
+   background-color: #0b0b0b;
+}
+.rec-12 {
+   background-color: #090809;
+}
+.rec-13 {
+   background-color: #191013;
+}
+.rec-14 {
+   background-color: #1b1214;
+}
+.rec-15 {
+   background-color: #1a1212;
+}
+.rec-16 {
+   background-color: #0c2031;
+}
+.rec-17 {
+   background-color: #0f2532;
+}
+.rec-18 {
+   background-color: #1c2e40;
+}
+.rec-19 {
+   background-color: #1d2a3c;
+}
+.rec-20 {
+   background-color: #a3260f;
+}
+.rec-21 {
+   background-color: #bf340e;
+}
+.rec-22 {
+   background-color: #d43e19;
+}
+.rec-23 {
+   background-color: #d24710;
+}
+.rec-24 {
+   background-color: #e1ba15;
+}
+.rec-25 {
+   background-color: #e0b81a;
+}
+.rec-26 {
+   background-color: #e4be15;
+}
+.rec-27 {
+   background-color: #d0a615;
+}
+
 .art-container {
    /* Grid */
    display: grid;
@@ -16,17 +117,23 @@ div:not(.art-container) {
    column-gap: 0.6%;
    grid-template-rows: 2% 9% 13.5% 22.5% 13.25% 14.6% 16% 7%;
    /* grid-template-rows: 0.02fr 0.1fr 0.135fr 0.185fr 0.15fr 0.155fr 0.18fr 0.085fr; */
-   row-gap: 2px;
+   row-gap: 0.325%;
 
    /* Sizing and Location */
-   width: 40rem;
-   height: 41rem;
+   width: 50vw;
+   height: 48.7804878vw;
    margin: 5rem auto;
    position: relative;
    border-radius: 4px;
 
    /* Coloring */
    background-color: #2d1c0e;
+}
+
+@media only screen and (max-width: 600px) {
+   .art-container {
+      display: none;
+   }
 }
 .brick-01 {
    grid-column-start: 1;
