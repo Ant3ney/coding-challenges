@@ -1,5 +1,7 @@
 ## Live demo
 
+https://zip-code-challenge.netlify.app/
+
 ## How I did this challenge
 
 Firstly I read through the directions carefully. I found out what was being asked of me, found out how the Zippopotam API worked, then I started work on planning and designing a solution for this coding challenge. I drew the wireframes for how the site should look when the page first loads and after the user searches. From there I wrote out how JS will interact with the dom and then wrote out how the CSS will animate those changes. With everything planned out, it was very straightforward to implement my plans.
