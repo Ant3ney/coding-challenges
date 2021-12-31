@@ -32,7 +32,7 @@ function search(e) {
       loaderEle.classList.add('searched');
    }
 
-   client.open('GET', `http://api.zippopotam.us/us/${inputText}`, true);
+   client.open('GET', `https://api.zippopotam.us/us/${inputText}`, true);
    client.onreadystatechange = function () {
       removeClass(loaderEle, 'searched');
       loaderEle.classList.add('loaded');
