@@ -1,15 +1,41 @@
-<!doctype html>
-<head>
-	<meta charset="utf-8">
-	<title>Zip Code</title>
-	<meta name="description" content="A frontend dev aptitude test by Deep Space Robots.">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="reset.css">
-	<link rel="stylesheet" href="style.css">
-</head>
-<body>
-	
-	<script src="script.js"></script>
-</body>
-</html>
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <title>Zip Code Coding Challange</title>
+      <meta
+         name="description"
+         content="A frontend dev aptitude test by Deep Space Robots."
+      />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+      <link rel="stylesheet" href="style.css" />
+   </head>
+   <body>
+      <img class="bg" src="/bg.jpg" />
+      <div class="film"></div>
+      <form class="container" onsubmit="search(event)">
+         <h1 class="title aninimate-on-search">US Zip Code Search</h1>
+         <h2 class="subtitle aninimate-on-search">Enter a zipcode to start</h2>
+         <input class="nice-input zipcode-input" type="number" />
+         <button class="submit nice-input aninimate-on-search" type="submit">
+            Search
+         </button>
+         <div class="loader aninimate-on-search"></div>
+         <h1 class="info aninimate-on-search">
+            <span class="place">Torrance </span
+            ><span class="state">California </span
+            ><span class="country">United States</span>
+         </h1>
+         <img class="state-shape aninimate-on-search" src="/states/CA.svg" />
+      </form>
+      <div class="lower-context aninimate-on-search">
+         <div class="centerer">
+            <p class="ctx-state">CA</p>
+            <p class="ctx-lat">lat: -31.7</p>
+            <p class="ctx-long">long: 147.7</p>
+         </div>
+      </div>
+      <script src="script.js"></script>
+   </body>
+</html>

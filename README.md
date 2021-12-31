@@ -1,24 +1,15 @@
-# Zip Code Finder
+## Live demo
 
-This is a challenge designed to test your ability to fetch data from an API, and manipulate the DOM with javascript.  [ZIP Codes](https://en.wikipedia.org/wiki/ZIP_Code) are used by the USPS as unique identifiers for geographic regions. [Zippopotomus](https://zippopotam.us) is a free API that accepts zip codes, and returns detailed information about the geographic region that zip code represents.
+## How I did this challenge
 
+Firstly I read through the directions carefully. I found out what was being asked of me, found out how the Zippopotam API worked, then I started work on planning and designing a solution for this coding challenge. I drew the wireframes for how the site should look when the page first loads and after the user searches. From there I wrote out how JS will interact with the dom and then wrote out how the CSS will animate those changes. With everything planned out, it was very straightforward to implement my plans.
 
-## The Challenge
+## Challenges faced
 
-1. Accept user input of a zip code
-2. Fetch location details about that zip code from the [Zippopotomus](https://zippopotam.us) API.
-3. Display the location details.
-4. Hit it with the pretty stick; personalize the composition with some tasteful visual flair.
+### Calling the API via fetch
 
-## Requirements
+I initially tried to call the Zippopotam API via the fetch API but it returned a response that I did not understand. After a while of struggling I just decided to call the API in the way given by the Zippopotam example.
 
-- You must complete the challenge within 4 hours of receiving this link.
-- You may use the included US State images in /states.
-- You may not use 3rd-party libraries.
-- The code should work in the latest version of Chrome.
+### Displaying state shape SVGs
 
-## Instructions
-- Fork this repo to a private repo in your own GitHub account.
-- Complete the challenge.
-- Push your solution to your private repo.
-- Share your repo with @thisanimus and @robmomary.
+In the planning phase of this project, I struggled to come up with a way to display the correct SVG file without creating a large switch statement to handle each state. Luckily I noticed that the API retu

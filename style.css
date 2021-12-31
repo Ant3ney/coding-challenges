@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap');
+html {
+   font-family: 'Barlow', sans-serif;
+   color: #ffaf87;
+}
+body {
+   margin: 0;
+}
+.container {
+   z-index: 1;
+   margin: 0;
+   display: flex;
+   flex-direction: column;
+}
+.bg {
+   z-index: -2;
+   width: 100vw;
+   height: 100vh;
+   object-fit: cover;
+   position: absolute;
+}
+.film {
+   width: 100vw;
+   height: 100vh;
+   z-index: -1;
+   background-color: /* rgba(255, 175, 135, 0.4); */ /* rgb(76, 224, 179, 0.8); */ rgba(
+      55,
+      119,
+      113,
+      0.9
+   );
+   position: absolute;
+}
+h1 {
+   margin: 0;
+}
+h2 {
+   margin: 0;
+}
+p {
+   margin: 0;
+}
+.title {
+   width: 100%;
+   height: auto;
+   margin: 20vh auto 0 auto;
+   text-align: center;
+   font-size: 3rem;
+}
+.subtitle {
+   width: 100%;
+   height: 2rem;
+   margin: 8vh auto 0 auto;
+   text-align: center;
+}
+.nice-input {
+   width: 12rem;
+   height: 2rem;
+   margin: 2vh auto 0 auto;
+   font-size: 1.25rem;
+   border-radius: 9px;
+   border: 2px solid #ffaf87;
+   background-color: #862b23;
+   color: #ffaf87;
+   padding: 0.25rem;
+   text-align: center;
+   box-sizing: content-box;
+}
+.nice-input:focus {
+   outline: 2px solid #3b0e0a;
+}
+.info {
+   opacity: 0;
+   font-size: 2rem;
+   text-align: center;
+   padding: 0rem 1rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+}
+
+input[type='number'] {
+   -moz-appearance: textfield;
+}
+
+.loader {
+   opacity: 0;
+}
+
+.loader {
+   border: 16px solid #862b23; /* Light grey */
+   border-top: 16px solid #ffaf87; /* Blue */
+   border-radius: 50%;
+   width: 120px;
+   height: 120px;
+   animation: spin 2s linear infinite;
+   margin: 2vh auto 0 auto;
+}
+
+@keyframes spin {
+   0% {
+      transform: rotate(0deg);
+   }
+   100% {
+      transform: rotate(360deg);
+   }
+}
+
+.state-shape {
+   width: auto;
+   height: 0rem;
+   margin-top: 0vh;
+   opacity: 0;
+}
+
+@media only screen and (max-width: 550px) {
+   .state-shape {
+      height: 16rem;
+   }
+}
+
+.lower-context {
+   width: 100%;
+   position: absolute;
+   bottom: 0;
+   display: flex;
+   justify-content: center;
+   opacity: 0;
+}
+
+.centerer {
+   margin: 0 auto;
+   display: flex;
+}
+
+.ctx-state {
+   margin-right: 0.5rem;
+}
+.ctx-lat {
+   margin-right: 0.5rem;
+}
+
+/* API LOAD AND ANIMATION STYLES */
+.none {
+   display: none;
+}
+
+.info {
+   margin: 2vh auto 0 auto;
+}
+
+.zipcode-input {
+}
+
+.aninimate-on-search {
+   transition-property: font-size, margin, height, opacity, border;
+   transition-duration: 1s;
+}
+
+.searched.title {
+   margin: 5vh auto 0 auto;
+   font-size: 1rem;
+}
+.searched.subtitle {
+   margin: 0vh auto 0vh auto;
+   height: 0rem;
+   opacity: 0;
+}
+.searched.submit {
+   opacity: 0;
+   height: 0rem;
+   margin: 0vh auto;
+   padding: 0rem;
+   border: 0px;
+}
+.searched.loader {
+   opacity: 1;
+}
+
+/* LOADED CSS STYLES */
+.loaded.info {
+   opacity: 1;
+   font-size: 4rem;
+   margin: 5vh auto;
+}
+@media only screen and (max-width: 600px) {
+   .loaded.info {
+      font-size: 2.5rem;
+   }
+}
+
+.loaded.loader {
+   opacity: 0;
+   height: 0px;
+   margin: 0px 0px;
+   border: 0px;
+}
+
+.loaded.state-shape {
+   opacity: 1;
+   height: 18rem;
+   margin-top: 2vh;
+}
+
+.loaded.lower-context {
+   opacity: 1;
+}
