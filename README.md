@@ -2,6 +2,8 @@
 
 ## Live Demo
 
+https://card-deck-challenge.netlify.app/?suits=spades&limit=4&sorted=true
+
 ## How I implemented the solution
 
 Firstly I loaded the query params inside the window.onload function. Then I made sure to alert the user if the query parameter entered is of an invalid format. After taking steps to ensure the query parameters are valid, I formatted them properly and used them as part of arguments inside of the instantiated deck’s objects methods. Firstly I applied the filter params by calling the proper deck methods, I then sorted the deck if the sorted query parameter equaled true, then I limited the amount of output cards based on the limited parameter, then I ran the draw filtered cards method.
