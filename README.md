@@ -1,75 +1,21 @@
+# Card Deck Coding Challenge
 
-# Card Deck
+## Live Demo
 
-Because we are not always working from a blank slate, it's important for developers to be able to read preexisting code and figure out how to use it. This challenge designed to test your ability to manipulate the DOM using a preexisting class, based on parameters passed in through the url. When you load index.html, you'll see a deck of cards face down. Your challenge is to draw cards from that deck determined by parmeters passed in via the URL querystring.
+## How I implemented the solution
 
+Firstly I loaded the query params inside the window.onload function. Then I made sure to alert the user if the query parameter entered is of an invalid format. After taking steps to ensure the query parameters are valid, I formatted them properly and used them as part of arguments inside of the instantiated deck’s objects methods. Firstly I applied the filter params by calling the proper deck methods, I then sorted the deck if the sorted query parameter equaled true, then I limited the amount of output cards based on the limited parameter, then I ran the draw filtered cards method.
 
-## The Challenge
+## Challenges I Faced
 
-1. Accept parameters through the URL querystring.
-2. Draw the cards that match those parameters.
-3. Take a look at the existing class CardDeck, and determine how to use it to complete the test.
-  
+### Figuring out what code I should read carefully vs skim over
 
-## Requirements
+When reading the file script.js, I got a little worried about a line of code in the shuffle method. I did not understand exactly how the shuffle method worked. But it turned out this challenge did not require me to understand that.
 
-- You must complete the challenge within 4 hours of receiving this link.
-- You may not use 3rd-party libraries.
-- You may modify the class CardDeck if you like, but the task can be completed without modifying the class at all.
-- The code should work in the latest version of Chrome.
-  
+### Understanding how the instructions expected the sorted query parameter to work
 
-### URL Parameters
-Use the following URL parameters to determine which cards should be drawn.  You should be able to filter by more than one parameter at a time, and non-specified parameters eg: (?foo=bar) should not draw any cards.
+The instructions mention that I could add a bounous query parameter called sorted that should sort the cards but it did not give examples on how to use it. I implemented it by checking to see if it equaled 'true' and sorted the cards if so.
 
-#### cards
+### Finding out weather the cards param should call the filter method or draw card method
 
-'cards' should accept one or more card id and draw all cards that match the requested id(s), eg: 
-
-`index.html?cards=s-3` should draw the 3 of spades
-
-`index.html?cards=s-3+c-9+h-A` should draw the 3 of spades, 9 of clubs, and Ace of hearts.
-
-#### suits
-
-'suits' should accept one or more suit name, and draw all cards that match the requested suit(s) eg:
-
- `index.html?suits=spades` should draw all the spades.
-
- `index.html?suits=spades+hearts` should draw all the spades, and all the hearts.
- 
-#### ranks
-
-'ranks' should accept one or more rank value, and draw all cards that match the requested rank(s) eg:
-
- `index.html?ranks=3` should draw all the 3s
-
- `index.html?ranks=3+5+13` should draw all the 3s, 5s, and Kings
-
-#### limit
-
-'limit' should limit the number of cards drawn eg:
-
- `index.html?suits=spades&limit=4` should draw any 4 spades.
-
- `index.html?suits=clubs+hearts&ranks=2+6+10&limit=4` should draw any 4 of the following cards: 
- 
- - 2 of clubs
- - 2 of hearts
- - 6 of clubs
- - 6 of hearts
- - 10 of clubs
- - 10 of hearts
-
-#### BONUS: sorted
-
-If you're still thirsty for more:
-'sorted' should sort the drawn cards: grouped by suit and ordered by rank.  Ordering may be either asc or desc.
-  
-
-## Instructions
-
-- Fork this repo to a private repo in your own GitHub account.
-- Complete the challenge.
-- Push your solution to your private repo.
-- Share your repo with @thisanimus and @robmomary.
+The cards query parameter can have a huge effect on the displayed drawn cards so I wondered whether or not it should be applied as a filter or whether it should just draw cards. In the end I made it so that cards apply a filter.
